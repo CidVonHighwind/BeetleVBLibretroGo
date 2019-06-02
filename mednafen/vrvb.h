@@ -1,34 +1,38 @@
 
+#include <functional>
+
 namespace VRVB {
 
-extern uint16_t input_buf[];
+    extern uint16_t input_buf[];
 
-void (*audio_cb)(int16_t *SoundBuf, int32_t SoundBufSize);
 
-void (*video_cb)(const void *data, unsigned width, unsigned height);
 
-void Init();
+    void (*audio_cb)(int16_t *SoundBuf, int32_t SoundBufSize);
 
-void LoadRom(const uint8_t *data, size_t size);
+    void (*video_cb)(const void *data, unsigned width, unsigned height);
 
-void Run();
+    void Init();
 
-void UpdateScreen();
+    void LoadRom(const uint8_t *data, size_t size);
 
-void SetPalette();
+    void Run();
 
-size_t retro_serialize_size();
+    void UpdateScreen();
 
-void Reset();
+    void SetPalette();
 
-size_t save_ram_size();
+    size_t retro_serialize_size();
 
-void *save_ram();
+    void Reset();
 
-void load_ram(const void *data, size_t size);
+    size_t save_ram_size();
 
-bool retro_serialize(void *data, size_t size);
+    void *save_ram();
 
-bool retro_unserialize(const void *data, size_t size);
+    void load_ram(const void *data, size_t size);
+
+    bool retro_serialize(void *data, size_t size);
+
+    bool retro_unserialize(const void *data, size_t size);
 
 }

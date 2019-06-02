@@ -30,8 +30,6 @@ LOCAL_C_INCLUDES := \
 	$(MEDNAFEN_DIR)/sound \
 	$(MEDNAFEN_DIR)/vb \
 	$(MEDNAFEN_DIR)/video
-	# $(CORE_DIR) \
-	# C:/Users/Patri/AppData/Local/Android/Sdk/ndk-bundle/sysroot/usr/include
 					
 LOCAL_SRC_FILES := \
 	$(CORE_EMU_DIR)/input.cpp \
@@ -44,8 +42,6 @@ LOCAL_SRC_FILES := \
 	$(MEDNAFEN_DIR)/mempatcher.cpp \
 	$(MEDNAFEN_DIR)/video/surface.cpp \
 	$(MEDNAFEN_DIR)/vrvb.cpp
-	# \
-	# $(CORE_DIR)/libretro.cpp
 	
 LOCAL_SRC_FILES += \
 	$(MEDNAFEN_DIR)/hw_cpu/v810/fpu-new/softfloat.c $(MEDNAFEN_DIR)/sound/Blip_Buffer.c
