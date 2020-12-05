@@ -5,15 +5,15 @@ namespace VRVB {
 
     extern uint16_t input_buf[];
 
+    std::function<void(int16_t *SoundBuf, int32_t SoundBufSize)> audio_cb;
 
-
-    void (*audio_cb)(int16_t *SoundBuf, int32_t SoundBufSize);
-
-    void (*video_cb)(const void *data, unsigned width, unsigned height);
+    std::function<void(const void *data, unsigned width, unsigned height)> video_cb;
 
     void Init();
 
     void LoadRom(const uint8_t *data, size_t size);
+
+    void unload_game();
 
     void Run();
 
